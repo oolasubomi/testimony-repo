@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&family=Tagesschrift&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: hsl(260, 100%, 95%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+section{
+    display: grid;
+    grid-auto-rows: 20rem;
+    grid-auto-columns: 16rem;
+    grid-template-areas: 
+    'one one two five'
+    'three four four five';
+    gap: 10px;
+    padding: 10px;
+}
+
+.box{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1.2rem;
+}
+
+.head{
+    display: flex;
+    gap: 1.5rem;
+}
+
+img{
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+
+h1, h2 ,h3{
+    font-family: "Roboto"
+}
+
+h1{
+    font-size: Large;
+    color: #fff;
+}
+
+h2{
+    color: #fff;
+    font-size: 16px;
+}
+
+p{
+    font-size: small;
+    color: #fff;
+    font-family: "Open Sans", system-ui;
+}
+
+.three h1, .five h1, .three p, .five p, .three h2, .five h2{
+    color:hsl(217, 19%, 35%);
+}
+
+.one{
+   background-color:  hsl(263, 55%, 52%);
+   grid-area: one;
+}
+
+.two{
+    background-color:  hsl(217, 19%, 35%);
+    grid-area: two;
+}
+
+.three{
+    background-color: #fff;
+    grid-area: three;
+}
+
+.four{
+    background-color: hsl(219, 29%, 14%);
+    grid-area: four;
+}
+
+.five {
+    background-color: #fff;
+    grid-area: five;
+}
+
+
+
+@media screen and (max-width: 1000px){
+
+    section{
+        grid-template-areas: 
+        'one one two '
+        'three four four'
+        'five five five';
+        height: 100%;
+    }
+}
+
+@media screen and (max-width: 700px){ 
+
+    section{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .box{
+        gap: 1rem;
+    }
+}
